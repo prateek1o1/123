@@ -1,0 +1,43 @@
+Think of yourself as a counsellor for an online marketing firm. The agency invests a lot of time and resources in researching the top websites to post its ads. They choose websites that would attract steady online traffic so that their adverts can be seen for a long time. Wouldn't it be fantastic if you could automate this procedure and conserve resources for the business? The agency has generated a dataset of raw HTML, metadata, and a binary label for each webpage to help with this. The binary label indicates whether or not the website was chosen for ad placement. In order to determine which online pages are worthy of posing an advertisement on, this assignment aims to select the pertinent, high-quality websites from a pool of user-curated web pages. Building large-scale, end-to-end machine learning models that can categorise websites as "relevant" or "irrelevant" based on factors like the alchemy category and its score, meta-data about the web pages, and a one-line summary of each page's content is required for the challenge. By having you translate the dataset's textual properties into some kind of numerical data and then build your machine learning models using this numerical data, this job intends to acquaint you with the field of NLP.
+
+Dataset Description
+
+This dataset includes rows of web pages, their descriptions, meta-statistics, and a label designating whether or not those pages are "ad-worthy" in binary form, with values 0 and 1, respectively.
+
+Files
+
+train.csv - The training dataset which contains the target variable 'label'.
+test.csv - The test dataset which does not contain the target variable 'label'.
+sample_submission.csv - A sample submission file in the correct format. Note that final predictions should be probability scores and not the class labels!
+page_information.zip - A .zip file containing the raw HTML content for each URL. Each URL's raw content is stored in a tab-delimited text file, named with the link_id as indicated in train.csv and 	 test.csv.
+
+Columns
+
+link: URL of the webpage to be classified
+link_id:
+page_description: Description of the webpage
+alchemy_category: Alchemy category
+alchemy_category_score: Alchemy category score
+avg_link_size: Average number of words in a webpage
+common_word_link_ratio_1: # of links sharing at least 1 word with 1 other links / # of links
+common_word_link_ratio_2: # of links sharing at least 1 word with 2 other links / # of links
+common_word_link_ratio_3: # of links sharing at least 1 word with 3 other links / # of links
+common_word_link_ratio_4: # of links sharing at least 1 word with 4 other links / # of links
+compression_ratio: Measure of redundancy computed by finding the compression achieved on this web page via gzip
+embed_ratio: Count of tags or simply the number of usages.
+frame_based: Binary indication of whether a webpage has frameset markup
+frame_tag_ratio: Ratio of frameset markups over total markups
+has_domain_link: Binary indication of whether the webpage contains in URL with a domain
+html_ratio: Ratio of tags vs text on the page
+image_ratio: Ratio of tags vs text in the page
+is_news: This is true(1) if this webpage is news
+lengthy_link_domain: This is true (1) if the webpage's text contains more than 30 alpha-numeric characters
+link_word_score: Percentage of words on the webpage that are also in the hyperlink text
+news_front_page: True (1) if StumbleUpon's news classifier determines that this webpage is front-page news
+non_markup_alphanumeric_characters: Number of alpha-numeric characters in webpage's text
+count_of_links: Number of markups
+number_of_words_in_url: Number of words in URL
+parametrized_link_ratio: A link is parametrized if its URL contains parameters or has an attached onClick event
+spelling_mistakes_ratio: Ratio of words not found in the wiki (considered to be a spelling mistake)
+label: The label value of 0 represents that the webpage is not "ad-worthy", and a label value of 1 represents that the webpage is "ad-worthy". This is available only for train.csv.
+
